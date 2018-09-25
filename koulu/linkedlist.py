@@ -100,32 +100,12 @@ class LinkedList:
                 """Return the node at position 'n'."""
         def add_first(self, obj):
                 new_first = ListNode(obj)
-                #last_first = self._get_at(1)
                 self.head.add_after(new_first)
-                #new_first.add_after(last_first) !!!!
-		
-		#if new_first.follower.obj == None:
-		#	new_first.add_after(self.tail)
-		#else:
-		#	new_first.add_after(self._get_at(2))
 		
         def add_last(self, obj):
-                #in = self.get_size()
-                #prev_last = self._get_at(n)
                 uusi_last = ListNode(obj)
-                #nthminusyks = self._get_at(n-1)
-                #nthminusyks.add_after(uusi_nth)
-                #uusi_nth.add_after(original_nth)
-                
-                
                 prev_last = self.tail.predecessor
-                #uusi_last = ListNode(obj)
                 prev_last.add_after(uusi_last)
-		
-		#linkitetaan tail
-                #uusi_last.add_after(self.tail)	
-		
-		      
 
                 """Add the object 'obj' as the last node."""
 
@@ -139,12 +119,6 @@ class LinkedList:
                     self.add_first(obj)
                 else:
                     nth_node.predecessor.add_after(uusi_nth)
-               # original_nth = self._get_at(n)
-               # uusi_nth = ListNode(obj)
-               # nthminusyks = self._get_at(n-1)
-               # nthminusyks.add_after(uusi_nth)
-               # uusi_nth.add_after(original_nth)
-		
 
                 """Insert the object 'obj' as the 'n'th node."""
 
@@ -176,65 +150,3 @@ class LinkedList:
                         walker = walker.follower
                 return(i)
                 """Return the number of objects in the list."""
-
-'''
-JaakonLista = LinkedList()
-JaakonLista.add_first("kakka")
-print("eka:",JaakonLista._get_at(0))
-JaakonLista.add_last("pylly")
-print("vika:",JaakonLista._get_at(1))
-print(JaakonLista(ListNode))
-
-from sys import exit as proper_exit
-proper_exit()
-
-eka = 'yksi'
-toka = 'kaksi'
-kolmas = 'kolme'
-#LinkedList.toka.add_last()
-#LinkedList.kolmas.add_position(1)
-
-dev_1 = ListNode('testi')
-dev_2 = ListNode('toinentesti')
-dev_3 = ListNode('kolmastesti')
-
-#LinkedList.add_first(dev_1)
-print("dev_1")
-print("kaks ==", dev_1.obj)
-print(dev_1.follower)
-print(dev_1.predecessor)
-print("dev_2")
-print(dev_2.obj)
-print(dev_2.follower)
-print(dev_2.predecessor)
-print("dev_3")
-print(dev_3.obj)
-print(dev_3.follower)
-print(dev_3.predecessor)
-#LinkedList.obj(dev_1)
-#LinkedList.add_first()
-
-
-LinkedList.add_first(LinkedList,dev_1)
-#dev_2.add_after(dev_1)
-#dev_3.add_after(dev_2)
-#dev_1.add_after(dev_3)
-#dev_1.add_after(dev_2)
-print("dev_1")
-print(dev_1.obj)
-print(dev_1.follower)
-print(dev_1.predecessor)
-print("dev_2")
-print(dev_2.obj)
-print(dev_2.follower)
-print(dev_2.predecessor)
-print("dev_3")
-print(dev_3.obj)
-print(dev_3.follower)
-print(dev_3.predecessor)
-print(LinkedList.get_size())
-#print(dev_1.LinkedList.head.obj)
-
-
-
-'''
